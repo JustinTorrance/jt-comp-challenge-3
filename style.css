@@ -1,0 +1,246 @@
+/*on pipline options for mobile, can use >> to open further*/
+
+
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  height: 1600px;
+  display: grid;
+  grid-template-columns: repeat(2, 200px calc(100% - 200px));
+  font-family: 'Open Sans', sans-serif;
+}
+
+aside {
+  background-color: #374050;
+  color: #ADB6C6;
+}
+
+.job-boards, .nav-item:hover {
+  color: white;
+  border-left: #4CACF2 solid 2px;
+  background-color: #313949;
+  cursor: pointer;
+  padding-left: 8px !important;
+}
+
+aside section:not(.nav-section-categories) {
+  border-bottom: solid #313949 3px;
+}
+
+.profile-section {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.profile-img {
+  height: 90px;
+  width: 90px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
+
+.profile-user:hover {
+  color: white;
+  cursor: pointer;
+}
+
+nav section {
+  padding: 30px 0;
+}
+
+.nav-title {
+  font-size: .8rem;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 0 5px 10px;
+}
+
+.icon-div {
+  width: 20px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.fa-check-square {
+  color: #F9DA4B;
+}
+
+.blue-square {
+  color: #53ABF8;
+}
+
+.red-square {
+  color: #D03660;
+}
+
+.green-square {
+  color: #4CA88B;
+}
+
+
+
+
+
+
+
+
+
+
+main {
+  background-color: #EEF2F6;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 200px 1300px;
+}
+
+.nav-search {
+  display: grid;
+  grid-template-columns: 10% 60% 10% 10% 10%;
+  border-bottom: 1px solid lightgray;
+  color: #959AA0;
+  font-size: 1.5rem;
+  background-color: white;
+}
+
+
+.nav-search-article:hover:not(.nav-input-article) {
+  background-color: #48A2F1;
+  color: white !important;
+  cursor: pointer;
+}
+
+
+.nav-input-article, .nav-search-article {
+  border-left: 1px solid lightgray;
+}
+
+.fa-caret-left {
+  color: #469AE7;
+  padding-right: 2px;
+}
+
+.nav-search-article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-input-article {
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+}
+
+input {
+  border: none;
+  height: 98px;
+  width: 100%;
+  margin-left: 10px;
+  font-size: 1.1rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  font-size: 1.1rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+.nav-dashboard {
+  background-color: white;
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dashboard-div {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 50px 0 50px;
+  align-items: center;
+}
+
+.job-title-h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.job-title-article p {
+  font-size: .9rem;
+}
+
+.preview {
+  color: #80C0F0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dashboard-btns-article {
+  display: flex;
+}
+
+
+.fa-circle {
+  color: #9BC95C;
+}
+
+.btn, .open-btn { 
+  border-radius: 50px;
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  align-self: center;
+}
+
+.open-btn {
+  width: 100px;
+  height: 40px;
+  font-weight: 600;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.btn {
+  width: 40px;
+  height: 40px;
+}
+
+.dashboard-pipeline-article {
+  display: flex;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.dashboard-pipeline-article p {
+  margin-left: 50px;
+  padding: 10px 0;
+}
+
+.summary-p, .dashboard-pipeline-article p:hover {
+  border-bottom: 4px solid #48A2F1;
+  cursor: pointer;
+  color: black;
+}
+
