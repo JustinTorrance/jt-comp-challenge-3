@@ -9,7 +9,7 @@
 }
 
 body {
-  height: 1600px;
+  height: 1550px;
   display: grid;
   grid-template-columns: repeat(2, 200px calc(100% - 200px));
   font-family: 'Open Sans', sans-serif;
@@ -103,7 +103,7 @@ main {
   background-color: #EEF2F6;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px 200px 1300px;
+  grid-template-rows: 90px 200px 360px 2px 900px;
 }
 
 .nav-search {
@@ -146,7 +146,7 @@ main {
 
 input {
   border: none;
-  height: 98px;
+  height: 89px;
   width: 100%;
   margin-left: 10px;
   font-size: 1.1rem;
@@ -226,10 +226,17 @@ input::placeholder {
   height: 40px;
 }
 
+.open-btn:hover,
+.btn:hover {
+  background-color: #efefef;
+  cursor: pointer;
+
+}
+
 .dashboard-pipeline-article {
   display: flex;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: .9rem;
   margin: 0;
 }
 
@@ -244,3 +251,354 @@ input::placeholder {
   color: black;
 }
 
+
+
+
+.chart-section {
+  display: grid;
+  grid-template-columns: 58% 42%;
+}
+
+
+.circle-chart-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 650px;
+  margin: 40px;
+  justify-items: center;
+}
+
+.circle-chart {
+  width: 180px;
+  height: 180px;
+}
+
+.circle-chart__circle {
+  animation: circle-chart-fill 2s reverse; 
+  transform: rotate(90deg); 
+  transform-origin: center; 
+}
+
+.circle-chart__info {
+  animation: circle-chart-appear 2s forwards;
+  opacity: 0;
+  transform: translateY(0.3em);
+}
+
+@keyframes circle-chart-fill {
+  to { stroke-dasharray: 0 100; }
+}
+
+@keyframes circle-chart-appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.totals-btn-div {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+
+.totals-btn {
+  width: 230px;
+  margin-top: 42px;
+}
+
+.applicants-btn {
+  width: 150px;
+  margin-top: 33px;
+}
+
+.chart-btn {
+  height: 40px;
+  font-weight: 600;
+  font-size: .9rem;
+  border-radius: 50px;
+  border: 1px solid gray;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-btn:hover {
+  cursor: pointer;
+  background-color: #efefef;
+}
+
+.bar-chart-div {
+  background-image: url(images/chart.png);
+  background-size: cover;
+  background-position: center;
+  height: 230px;
+  width: 465px;
+  margin-top: 10px;
+}
+
+.applicants-btn-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-right: 37px;
+}
+
+
+
+hr {
+  border: none;
+  border-top: 1px solid gray;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+  margin: 0 5%;
+}
+
+hr:after {
+
+  content: "\f139";
+  font-family: FontAwesome;
+  color: gray;
+  background: #EEF2F6;
+  padding: 0 10px;
+  position: relative;
+  top: -13px;
+
+}
+
+
+
+
+.bottom-section {
+  display: grid;
+  grid-template-columns: 70% 25%;
+  grid-gap: 5%;
+  margin: 50px 5%;
+}
+
+
+.job-details-section {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(10, 1fr)
+  justify-items: center;
+  border-bottom: 1px solid #727E93;
+}
+
+.job-details-article, .job-description-article {
+  display: flex;
+  align-items: center;
+}
+
+.job-details-article {
+  color: #727E93;
+}
+
+.garbage-div {
+  border-bottom: solid 1px #727E93; 
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 40px;
+  width: 90%;
+}
+
+.row-header-div {
+  width: 160px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.row-details-div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 2%;
+}
+
+.job-description-article {
+  background-color: #727E93;
+  color: white;
+  font-weight: 600;
+}
+
+.edit-btn {
+  background-color: #7E8AA3;
+  color: white;
+  border: none;
+  outline: none;
+  width: 80px;
+  height: 40px;
+  font-size: .9rem;
+}
+
+.edit-btn:hover {
+  cursor: pointer;
+  background-color: darkgray;
+}
+
+.edit-pen {
+  margin-right: 5px;
+}
+
+.description-article {
+  grid-row-start: 7;
+  grid-row-end: 9;
+}
+
+.description-header-div {
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+.description-details-div {
+  padding: 0 10%;
+}
+
+.img-div {
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  background-image: url(images/fred.jpg);
+  background-size: 80px 55px, cover;
+  background-position: center;
+  margin-right: 2%;
+}
+
+.hiring-lead-details {
+  width: 300px;
+}
+
+.salary-div {
+  border: none;
+}
+
+.salary {
+  font-weight: 800;
+}
+
+
+
+
+.social-media-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25% 75%;
+}
+
+
+.social-media-btns {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  cursor: pointer;
+}
+
+.social-media-btns article {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.social-media-btns div {
+  height: 60px;
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+.fab {
+}
+
+.fb-btn{
+ background-color: #516FBE;
+
+}
+
+.twitter-btn {
+  background-color: #47A8E8;
+}
+
+.linkedin-btn {
+  background-color: #3681B7;
+}
+
+
+
+
+
+
+
+.media-linking-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  color: #727E93;
+}
+
+.media-linking-article {
+  border-bottom: 1px solid #727E93;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.media-linking-article div {
+  display: flex;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.header-p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.description-p {
+  margin-bottom: 15px;
+}
+
+.description-p, .link-p {
+  font-size: .8rem;
+}
+
+.link-p {
+  background-color: white;
+  width: 80%;
+  justify-content: flex-start;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.media-linking-section button {
+  width: 20%;
+  background-color: #66B5C0;
+  font-size: .9rem;
+  color: white;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  outline: none;
+  border: none;
+}
+
+.email-p {
+  width: 100%;
+}
+
+.email-article {
+  padding-bottom: 0;
+}
